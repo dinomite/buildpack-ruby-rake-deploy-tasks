@@ -8,7 +8,7 @@ build_dir=$1
 cache_dir=$2
 env_dir=$3
 
-blacklist_regex=${3:-'^(GIT_DIR|CPATH|CPPATH|LD_PRELOAD|LIBRARY_PATH)$'}
+blacklist_regex=${3:-'^(PATH|GIT_DIR|CPATH|CPPATH|LD_PRELOAD|LIBRARY_PATH)$'}
 if [ -d "$env_dir" ]; then
   for e in $(ls $env_dir); do
     echo "$e" | grep -qvE "$blacklist_regex" &&
@@ -24,4 +24,7 @@ if [ -z "$DEPLOY_TASKS" ]; then
   exit 1 
 fi
 
+puts ENV['PATH']
+system 'which ruby'
+system 'ruby -version'
 cd $build_dir && bundle exec rake $DEPLOY_TASKS
