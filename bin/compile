@@ -24,7 +24,7 @@ if [ -z "$DEPLOY_TASKS" ]; then
   exit 1 
 fi
 
-puts ENV['PATH']
-system 'which ruby'
-system 'ruby -version'
+echo $PATH
+which ruby
+ruby -version
 cd $build_dir && bundle exec rake $DEPLOY_TASKS
