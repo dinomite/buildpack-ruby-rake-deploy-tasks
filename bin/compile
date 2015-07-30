@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-export CUSTOM_RUBY_VERSION='2.2.1'
 set -e            # fail fast
 set -o pipefail   # don't ignore exit codes when piping output
 
