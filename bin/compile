@@ -23,14 +23,14 @@ if [ -z "$DEPLOY_TASKS" ]; then
   exit 1 
 fi
 
-#echo $PATH
-#which ruby
-#ruby -v
-#ls /app/bin
-#/app/bin/ruby -v
+echo $PATH
+which ruby
+ruby -v
+ls /app/bin
+/app/bin/ruby -v
 /usr/local/bin/ruby -v
 
-pwd
-find / -type f -name 'ruby'
+#pwd
+#find / -type f -name 'ruby'
 
 cd $build_dir && bundle exec rake $DEPLOY_TASKS
