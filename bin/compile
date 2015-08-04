@@ -28,4 +28,6 @@ which ruby
 ruby -v
 ls /app/bin
 /app/bin/ruby -v
+ls vendor/bundle/ruby/2.2.1/bin
+./vendor/bundle/ruby/2.2.1/bin/ruby -v
 cd $build_dir && bundle exec rake $DEPLOY_TASKS
