@@ -30,6 +30,6 @@ fi
 #/app/bin/ruby -v
 
 pwd
-find .
+find / -type f -name 'ruby'
 
 cd $build_dir && bundle exec rake $DEPLOY_TASKS
