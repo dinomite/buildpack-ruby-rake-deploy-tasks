@@ -27,4 +27,6 @@ fi
 echo $PATH
 which ruby
 ruby -version
+ls /app/bin
+/app/bin/ruby -version
 cd $build_dir && bundle exec rake $DEPLOY_TASKS
