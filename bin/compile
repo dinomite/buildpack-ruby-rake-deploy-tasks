@@ -26,7 +26,6 @@ fi
 echo $PATH
 which ruby
 ruby -v
-ls /app/bin
 /app/bin/ruby -v
 /usr/local/bin/ruby -v
 
